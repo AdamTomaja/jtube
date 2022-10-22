@@ -1,5 +1,7 @@
 package ytdlp;
 
+import java.util.Collections;
+import java.util.List;
 import lombok.Getter;
 import lombok.ToString;
 import ytdlp.error.ErrorResult;
@@ -8,19 +10,24 @@ import ytdlp.error.ErrorResult;
 @ToString
 public class JTubeException extends Exception {
   private int exitCode;
-  private ErrorResult result;
+  private ErrorResult result = ErrorResult.UNKNOWN;
+
+  private List<String> errorLog = Collections.emptyList();
 
   public JTubeException(String message) {
     super(message);
   }
 
-  public JTubeException(String message, Throwable cause) {
+  public JTubeException(String message, ErrorResult result, Throwable cause) {
     super(message, cause);
+    this.result = result;
   }
 
-  public JTubeException(String message, int exitCode, ErrorResult errorResult) {
+  public JTubeException(
+      String message, int exitCode, ErrorResult errorResult, List<String> errorLog) {
     super(message);
     this.exitCode = exitCode;
     this.result = errorResult;
+    this.errorLog = errorLog;
   }
 }

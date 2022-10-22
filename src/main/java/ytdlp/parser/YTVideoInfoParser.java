@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import ytdlp.JTubeException;
 import ytdlp.YTVideoInfo;
+import ytdlp.error.ErrorResult;
 
 public class YTVideoInfoParser {
   public YTVideoInfo parseInfo(String log) throws JTubeException {
@@ -32,7 +33,8 @@ public class YTVideoInfoParser {
           .description(joinDescription(log))
           .build();
     } catch (Exception e) {
-      throw new JTubeException("Cannot parse duration of video from last log line", e);
+      throw new JTubeException(
+          "Cannot parse duration of video from last log line", ErrorResult.JTUBE_ERROR, e);
     }
   }
 

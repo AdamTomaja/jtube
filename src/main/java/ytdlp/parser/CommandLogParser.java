@@ -55,6 +55,8 @@ public class CommandLogParser {
       return Optional.of(ErrorResult.REMOVED_VIOLATION);
     } else if (line.contains("This live stream recording is not available.")) {
       return Optional.of(ErrorResult.LIVESTREAM_UNAVAILABLE);
+    } else if (line.contains("HTTP Error 404: Not Found")) {
+      return Optional.of(ErrorResult.HTTP_404);
     } else {
       return Optional.empty();
     }

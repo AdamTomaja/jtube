@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.function.Consumer;
+import ytdlp.error.ErrorResult;
 
 class StreamGobbler implements Callable<List<String>> {
   private final InputStream inputStream;
@@ -30,7 +31,8 @@ class StreamGobbler implements Callable<List<String>> {
       }
       return lines;
     } catch (IOException e) {
-      throw new JTubeException("Error when processing log stream input", e);
+      throw new JTubeException(
+          "Error when processing log stream input", ErrorResult.JTUBE_ERROR, e);
     }
   }
 }

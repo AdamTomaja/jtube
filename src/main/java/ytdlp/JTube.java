@@ -57,7 +57,7 @@ public class JTube {
 
     if (exitCode != 0) {
       throw new JTubeException(
-          "Command finished with error", exitCode, logParser.parseError(errorLog));
+          "Command finished with error", exitCode, logParser.parseError(errorLog), errorLog);
     }
 
     return log;
