@@ -57,6 +57,11 @@ public class CommandLogParser {
       return Optional.of(ErrorResult.LIVESTREAM_UNAVAILABLE);
     } else if (line.contains("HTTP Error 404: Not Found")) {
       return Optional.of(ErrorResult.HTTP_404);
+    } else if (line.contains(
+        "Sign in to confirm your age. This video may be inappropriate for some users.")) {
+      return Optional.of(ErrorResult.ONLY18PLUS);
+    } else if (line.contains("We're processing this video. Check back later.")) {
+      return Optional.of(ErrorResult.STILL_PROCESSING);
     } else {
       return Optional.empty();
     }
