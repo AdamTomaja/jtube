@@ -1,8 +1,8 @@
-package ytdlp.cmd;
+package jtube.cmd;
 
 import java.util.Optional;
+import jtube.JTubeConfig;
 import lombok.RequiredArgsConstructor;
-import ytdlp.JTubeConfig;
 
 @RequiredArgsConstructor
 public class CommandBuilder {

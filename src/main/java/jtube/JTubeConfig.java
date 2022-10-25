@@ -1,4 +1,4 @@
-package ytdlp;
+package jtube;
 
 import static java.util.function.UnaryOperator.identity;
 

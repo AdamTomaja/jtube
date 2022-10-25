@@ -1,4 +1,4 @@
-package ytdlp;
+package jtube;
 
 import java.io.IOException;
 import java.net.URL;
@@ -7,9 +7,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import ytdlp.cmd.CommandBuilder;
-import ytdlp.parser.CommandLogParser;
-import ytdlp.parser.YTVideoInfoParser;
+import jtube.cmd.CommandBuilder;
+import jtube.parser.CommandLogParser;
+import jtube.parser.YTVideoInfoParser;
 
 public class JTube {
 

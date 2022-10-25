@@ -1,4 +1,4 @@
-package ytdlp.parser;
+package jtube.parser;
 
 import java.time.Duration;
 import java.util.Arrays;

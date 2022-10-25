@@ -1,11 +1,11 @@
-package ytdlp.parser;
+package jtube.parser;
 
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
-import ytdlp.JTubeException;
-import ytdlp.YTVideoInfo;
-import ytdlp.error.ErrorResult;
+import jtube.JTubeException;
+import jtube.YTVideoInfo;
+import jtube.error.ErrorResult;
 
 public class YTVideoInfoParser {
   public YTVideoInfo parseInfo(String log) throws JTubeException {

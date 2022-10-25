@@ -1,4 +1,4 @@
-package ytdlp.error;
+package jtube.error;
 
 public enum ErrorResult {
   VIDEO_UNAVAILABLE,

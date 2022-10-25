@@ -1,9 +1,9 @@
-package ytdlp;
+package com.cydercode.jtube;
 
 import java.time.Duration;
+import jtube.parser.DurationParser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ytdlp.parser.DurationParser;
 
 class DurationParserTest {
 

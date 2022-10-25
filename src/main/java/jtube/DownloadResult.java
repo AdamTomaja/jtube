@@ -1,4 +1,4 @@
-package ytdlp;
+package jtube;
 
 import java.util.List;
 import lombok.*;

@@ -1,10 +1,11 @@
-package ytdlp;
+package com.cydercode.jtube;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import jtube.JTubeConfig;
+import jtube.cmd.CommandBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ytdlp.cmd.CommandBuilder;
 
 class CommandBuilderTest {
 

@@ -1,4 +1,4 @@
-package ytdlp;
+package jtube;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.function.Consumer;
-import ytdlp.error.ErrorResult;
+import jtube.error.ErrorResult;
 
 class StreamGobbler implements Callable<List<String>> {
   private final InputStream inputStream;

@@ -1,11 +1,12 @@
-package ytdlp.parser;
+package com.cydercode.jtube.parser;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 import java.util.List;
+import jtube.error.ErrorResult;
+import jtube.parser.CommandLogParser;
 import org.junit.jupiter.api.Test;
-import ytdlp.error.ErrorResult;
 
 class CommandLogParserTest {
 

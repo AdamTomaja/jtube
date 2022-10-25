@@ -1,12 +1,13 @@
-package ytdlp.parser;
+package com.cydercode.jtube.parser;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.time.Duration;
+import jtube.JTubeException;
+import jtube.YTVideoInfo;
+import jtube.parser.YTVideoInfoParser;
 import org.junit.jupiter.api.Test;
-import ytdlp.JTubeException;
-import ytdlp.YTVideoInfo;
 
 class YTVideoInfoParserTest {
 

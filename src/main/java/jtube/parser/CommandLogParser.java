@@ -1,10 +1,10 @@
-package ytdlp.parser;
+package jtube.parser;
 
 import java.util.List;
 import java.util.Optional;
-import ytdlp.DownloadResult;
-import ytdlp.JTubeException;
-import ytdlp.error.ErrorResult;
+import jtube.DownloadResult;
+import jtube.JTubeException;
+import jtube.error.ErrorResult;
 
 public class CommandLogParser {
 
