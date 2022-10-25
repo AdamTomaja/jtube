@@ -1,7 +1,9 @@
 package com.cydercode.jtube.json;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.ArrayList;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RequestedDownload {
   public ArrayList<RequestedFormat> requested_formats;
   public String format;

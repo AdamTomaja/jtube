@@ -38,6 +38,7 @@ public class YTVideoInfoParser {
           .duration(Duration.ofSeconds(jsonDump.duration))
           .isLive(jsonDump.is_live)
           .uploadDate(LocalDate.parse(jsonDump.upload_date, UPLOAD_DATE_FORMATTER))
+          .jsonDump(jsonDump)
           .build();
     } catch (JsonProcessingException e) {
       throw new JTubeException("Cannot parse json-dump", ErrorResult.UNKNOWN, e);

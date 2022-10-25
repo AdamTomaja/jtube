@@ -1,7 +1,9 @@
 package com.cydercode.jtube.json;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.ArrayList;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Format {
   public String format_id;
   public String format_note;

@@ -1,5 +1,6 @@
 package com.cydercode.jtube;
 
+import com.cydercode.jtube.json.JsonDump;
 import java.time.Duration;
 import java.time.LocalDate;
 import lombok.Builder;
@@ -17,4 +18,5 @@ public class YTVideoInfo {
   private final String description;
   private final boolean isLive;
   private final LocalDate uploadDate;
+  private final JsonDump jsonDump;
 }
