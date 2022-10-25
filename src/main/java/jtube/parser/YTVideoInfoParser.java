@@ -1,13 +1,21 @@
 package jtube.parser;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
 import jtube.JTubeException;
 import jtube.YTVideoInfo;
 import jtube.error.ErrorResult;
+import jtube.json.JsonDump;
 
 public class YTVideoInfoParser {
+
+  private final DateTimeFormatter UPLOAD_DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMdd");
+
   public YTVideoInfo parseInfo(String log) throws JTubeException {
     if (log == null) {
       throw new JTubeException("Unable to parse video info. Command log empty.");
@@ -17,32 +25,22 @@ public class YTVideoInfoParser {
   }
 
   public YTVideoInfo parseInfo(List<String> log) throws JTubeException {
-    if (log == null || log.isEmpty()) {
-      throw new JTubeException("Unable to parse video info. Command log empty.");
-    }
-
-    if (log.size() < 2) {
-      throw new JTubeException("Unable to parse video info. Less than 2 lines of log");
+    if (log.size() > 1) {
+      throw new JTubeException("Log bigger than one line");
     }
 
     try {
-      Duration duration = new DurationParser().parse(log.get(log.size() - 1));
+      JsonDump jsonDump = new ObjectMapper().readValue(log.get(0), JsonDump.class);
       return YTVideoInfo.builder()
-          .title(log.get(0))
-          .duration(duration)
-          .description(joinDescription(log))
+          .videoId(jsonDump.id)
+          .title(jsonDump.fulltitle)
+          .description(jsonDump.description)
+          .duration(Duration.ofSeconds(jsonDump.duration))
+          .isLive(jsonDump.is_live)
+          .uploadDate(LocalDate.parse(jsonDump.upload_date, UPLOAD_DATE_FORMATTER))
           .build();
-    } catch (Exception e) {
-      throw new JTubeException(
-          "Cannot parse duration of video from last log line", ErrorResult.JTUBE_ERROR, e);
+    } catch (JsonProcessingException e) {
+      throw new JTubeException("Cannot parse json-dump", ErrorResult.UNKNOWN, e);
     }
-  }
-
-  private String joinDescription(List<String> log) {
-    if (log.size() > 2) {
-      return String.join("\n", log.subList(1, log.size() - 1));
-    }
-
-    return "";
   }
 }

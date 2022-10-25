@@ -30,9 +30,7 @@ public class CommandBuilder {
     return new StringBuilder()
         .append(config.getYtDlpPath())
         .append(" ")
-        .append("--get-title ")
-        .append("--get-description ")
-        .append("--get-duration ")
+        .append("--dump-single-json ")
         .append(url)
         .toString();
   }
