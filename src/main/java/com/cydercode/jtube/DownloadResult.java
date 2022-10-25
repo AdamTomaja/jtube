@@ -1,4 +1,4 @@
-package jtube;
+package com.cydercode.jtube;
 
 import java.util.List;
 import lombok.*;

@@ -3,15 +3,14 @@ package com.cydercode.jtube.parser;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import com.cydercode.jtube.JTubeException;
+import com.cydercode.jtube.YTVideoInfo;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Collections;
-import jtube.JTubeException;
-import jtube.YTVideoInfo;
-import jtube.parser.YTVideoInfoParser;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
 

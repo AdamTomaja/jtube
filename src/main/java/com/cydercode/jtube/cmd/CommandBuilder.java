@@ -1,7 +1,7 @@
-package jtube.cmd;
+package com.cydercode.jtube.cmd;
 
+import com.cydercode.jtube.JTubeConfig;
 import java.util.Optional;
-import jtube.JTubeConfig;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

@@ -1,8 +1,8 @@
-package jtube;
+package com.cydercode.jtube;
 
+import com.cydercode.jtube.error.ErrorResult;
 import java.util.Collections;
 import java.util.List;
-import jtube.error.ErrorResult;
 import lombok.Getter;
 import lombok.ToString;
 

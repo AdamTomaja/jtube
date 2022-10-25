@@ -1,10 +1,10 @@
-package jtube.parser;
+package com.cydercode.jtube.parser;
 
+import com.cydercode.jtube.DownloadResult;
+import com.cydercode.jtube.JTubeException;
+import com.cydercode.jtube.error.ErrorResult;
 import java.util.List;
 import java.util.Optional;
-import jtube.DownloadResult;
-import jtube.JTubeException;
-import jtube.error.ErrorResult;
 
 public class CommandLogParser {
 

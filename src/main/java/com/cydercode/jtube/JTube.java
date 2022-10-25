@@ -1,5 +1,8 @@
-package jtube;
+package com.cydercode.jtube;
 
+import com.cydercode.jtube.cmd.CommandBuilder;
+import com.cydercode.jtube.parser.CommandLogParser;
+import com.cydercode.jtube.parser.YTVideoInfoParser;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -7,9 +10,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import jtube.cmd.CommandBuilder;
-import jtube.parser.CommandLogParser;
-import jtube.parser.YTVideoInfoParser;
 
 public class JTube {
 

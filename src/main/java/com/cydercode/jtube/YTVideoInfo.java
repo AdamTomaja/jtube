@@ -1,4 +1,4 @@
-package jtube;
+package com.cydercode.jtube;
 
 import java.time.Duration;
 import java.time.LocalDate;

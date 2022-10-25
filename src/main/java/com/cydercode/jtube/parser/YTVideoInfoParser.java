@@ -1,5 +1,9 @@
-package jtube.parser;
+package com.cydercode.jtube.parser;
 
+import com.cydercode.jtube.JTubeException;
+import com.cydercode.jtube.YTVideoInfo;
+import com.cydercode.jtube.error.ErrorResult;
+import com.cydercode.jtube.json.JsonDump;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.Duration;
@@ -7,10 +11,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
-import jtube.JTubeException;
-import jtube.YTVideoInfo;
-import jtube.error.ErrorResult;
-import jtube.json.JsonDump;
 
 public class YTVideoInfoParser {
 

@@ -1,5 +1,6 @@
-package jtube;
+package com.cydercode.jtube;
 
+import com.cydercode.jtube.error.ErrorResult;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.function.Consumer;
-import jtube.error.ErrorResult;
 
 class StreamGobbler implements Callable<List<String>> {
   private final InputStream inputStream;

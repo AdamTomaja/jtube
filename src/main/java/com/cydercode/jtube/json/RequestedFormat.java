@@ -1,4 +1,4 @@
-package jtube.json;
+package com.cydercode.jtube.json;
 
 public class RequestedFormat {
   public int asr;

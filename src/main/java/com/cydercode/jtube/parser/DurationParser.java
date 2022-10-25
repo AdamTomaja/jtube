@@ -1,4 +1,4 @@
-package jtube.parser;
+package com.cydercode.jtube.parser;
 
 import java.time.Duration;
 import java.util.Arrays;

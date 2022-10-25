@@ -1,7 +1,7 @@
 package com.cydercode.jtube;
 
+import com.cydercode.jtube.parser.DurationParser;
 import java.time.Duration;
-import jtube.parser.DurationParser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

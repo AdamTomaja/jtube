@@ -1,4 +1,4 @@
-package jtube.error;
+package com.cydercode.jtube.error;
 
 public enum ErrorResult {
   VIDEO_UNAVAILABLE,

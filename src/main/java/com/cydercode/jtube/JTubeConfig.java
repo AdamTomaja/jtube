@@ -1,4 +1,4 @@
-package jtube;
+package com.cydercode.jtube;
 
 import static java.util.function.UnaryOperator.identity;
 

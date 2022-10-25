@@ -2,8 +2,7 @@ package com.cydercode.jtube;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import jtube.JTubeConfig;
-import jtube.cmd.CommandBuilder;
+import com.cydercode.jtube.cmd.CommandBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -36,7 +35,7 @@ class CommandBuilderTest {
   @Test
   void shouldBuildForVideoInfo() {
     Assertions.assertEquals(
-        "/usr/bin/yt-dlp --get-title --get-description --get-duration http://youtube.com/video",
+        "/usr/bin/yt-dlp --dump-single-json http://youtube.com/video",
         createBuilder().buildForVideoInfo("http://youtube.com/video"));
   }
 
