@@ -50,6 +50,17 @@ class CommandLogParserTest {
     assertEquals(ErrorResult.VIDEO_UNAVAILABLE, parser.parseError(log));
   }
 
+  @Test
+  void shouldParseIncompleteId() {
+    List<String> log =
+        log(
+            """
+            ERROR: [youtube:truncated_id] jQY: Incomplete YouTube ID jQY. URL https://youtube.com/watch?v=jQY looks truncated.
+            """);
+
+    assertEquals(ErrorResult.INCOMPLETE_ID, parser.parseError(log));
+  }
+
   private static List<String> log(String log) {
     return Arrays.asList(log.split("\n"));
   }

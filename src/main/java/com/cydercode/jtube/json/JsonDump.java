@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class JsonDump {
   public String id;
   public String title;
-  public ArrayList<Format> formats;
   public ArrayList<Thumbnail> thumbnails;
   public String thumbnail;
   public String description;
@@ -45,15 +44,13 @@ public class JsonDump {
   public String duration_string;
   public Object requested_subtitles;
   public boolean __has_drm;
-  public ArrayList<RequestedDownload> requested_downloads;
-  public ArrayList<RequestedFormat> requested_formats;
   public String format;
   public String format_id;
   public String ext;
   public String protocol;
   public Object language;
   public String format_note;
-  public int filesize_approx;
+  public Long filesize_approx;
   public double tbr;
   public int width;
   public int height;

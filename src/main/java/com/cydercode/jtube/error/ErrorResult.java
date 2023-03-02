@@ -8,6 +8,7 @@ public enum ErrorResult {
   ONLY18PLUS,
   JTUBE_ERROR,
   STILL_PROCESSING,
+  INCOMPLETE_ID,
 
   HTTP_404,
   UNKNOWN

@@ -62,6 +62,8 @@ public class CommandLogParser {
       return Optional.of(ErrorResult.ONLY18PLUS);
     } else if (line.contains("We're processing this video. Check back later.")) {
       return Optional.of(ErrorResult.STILL_PROCESSING);
+    } else if (line.contains("Incomplete YouTube ID")) {
+      return Optional.of(ErrorResult.INCOMPLETE_ID);
     } else {
       return Optional.empty();
     }
