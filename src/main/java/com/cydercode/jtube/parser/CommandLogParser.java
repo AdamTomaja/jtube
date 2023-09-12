@@ -51,7 +51,7 @@ public class CommandLogParser {
       return Optional.of(ErrorResult.REMOVED_BY_UPLOADER);
     } else if (line.contains("Video unavailable")) {
       return Optional.of(ErrorResult.VIDEO_UNAVAILABLE);
-    } else if (line.contains("Private Video.") || line.contains("Private video.")) {
+    } else if (line.contains("Private Video.") || line.contains("Private video.") || line.contains("This video is private.")) {
       return Optional.of(ErrorResult.PRIVATE_VIDEO);
     } else if (line.contains("This video has been removed for violating YouTube")) {
       return Optional.of(ErrorResult.REMOVED_VIOLATION);

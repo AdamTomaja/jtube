@@ -16,9 +16,8 @@ class CommandLogParserTest {
     List<String> log =
         log(
             """
-            [youtube] _-vB-bie_Oo: Downloading webpage
-            [youtube] _-vB-bie_Oo: Downloading android player API JSON
-            ERROR: [youtube] _-vB-bie_Oo: Private video. Sign in if you've been granted access to this video
+            WARNING: [youtube] unable to extract initial player response; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+            ERROR: [youtube] _dstwUov5SQ: This video is private. If the owner of this video has granted you access, please sign in.
             """);
 
     assertEquals(ErrorResult.PRIVATE_VIDEO, parser.parseError(log));
