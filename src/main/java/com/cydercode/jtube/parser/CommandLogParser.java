@@ -47,7 +47,9 @@ public class CommandLogParser {
   }
 
   private Optional<ErrorResult> lineToError(String line) {
-    if (line.contains("Video unavailable")) {
+    if(line.contains("This video has been removed by the uploader")) {
+      return Optional.of(ErrorResult.REMOVED_BY_UPLOADER);
+    } else if (line.contains("Video unavailable")) {
       return Optional.of(ErrorResult.VIDEO_UNAVAILABLE);
     } else if (line.contains("Private Video.") || line.contains("Private video.")) {
       return Optional.of(ErrorResult.PRIVATE_VIDEO);

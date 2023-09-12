@@ -51,6 +51,17 @@ class CommandLogParserTest {
   }
 
   @Test
+  void shouldParseRemovedByUploader() {
+    List<String> log =
+            log(
+                    """
+                    ERROR: [youtube] SKiuVEy2G4Y: This video has been removed by the uploader
+                    """);
+
+    assertEquals(ErrorResult.REMOVED_BY_UPLOADER, parser.parseError(log));
+  }
+
+  @Test
   void shouldParseIncompleteId() {
     List<String> log =
         log(

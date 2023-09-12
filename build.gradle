@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'com.cydercode'
-version '1.13-SNAPSHOT'
+version '1.15-SNAPSHOT'
 
 sourceCompatibility = '17'
 
